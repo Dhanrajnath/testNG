@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/home/dhanrp/Desktop/eBay/testNG">
+    <test verbose="2" preserve-order="true" name="sample tests">
         <classes>
             <class name="FirstTestCase"/>
             <class name="SecondTestCase"/>
         </classes>
+    </test>
+    <test name="annotaion-demo">
+        <classes>
+            <class name="FirstTestCaseAnnotations">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+            <class name="SecondTestCaseAnnotations">
+                <methods>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="prioritizing-disabling-tests">
+        <classes>
+            <class name="PriorityExample"/>
+        </classes>
+    </test>
+    <test name="Dependency tests">
+        <classes>
+            <class name="DependencyExample"/>
+        </classes>
+    </test>
+    <test name="grouping test">
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <include name="regression"/>
+<!--                <exclude name="regression"/>-->
+            </run>
+        </groups>
+        <classes>
+            <class name="GroupingTestExample"/>
+        </classes>
+
     </test>
 </suite>
