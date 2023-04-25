@@ -32,4 +32,14 @@ public class FirstTestCaseAnnotations {
         System.out.println("FirstTestCaseAnnotations.test2");
     }
 
+    @BeforeTest
+    void beforeTest() {
+        System.out.println("FirstTestCaseAnnotations.beforeTest");
+    }
+
+    @AfterTest
+    void afterTest() {
+        System.out.println("FirstTestCaseAnnotations.afterTest");
+    }
+
 }
