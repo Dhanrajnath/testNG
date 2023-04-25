@@ -4,6 +4,7 @@
     <test verbose="2" preserve-order="true" name="/home/dhanrp/Desktop/eBay/testNG">
         <classes>
             <class name="FirstTestCase"/>
+            <class name="SecondTestCase"/>
         </classes>
     </test>
 </suite>
