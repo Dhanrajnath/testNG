@@ -23,4 +23,14 @@
             </class>
         </classes>
     </test>
+    <test preserve-order="true" name="prioritizing-disabling-tests">
+        <classes>
+            <class name="PriorityExample"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Dependency tests">
+        <classes>
+            <class name="DependencyExample"/>
+        </classes>
+    </test>
 </suite>
