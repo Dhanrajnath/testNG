@@ -23,14 +23,27 @@
             </class>
         </classes>
     </test>
-    <test preserve-order="true" name="prioritizing-disabling-tests">
+    <test name="prioritizing-disabling-tests">
         <classes>
             <class name="PriorityExample"/>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" name="Dependency tests">
+    <test name="Dependency tests">
         <classes>
             <class name="DependencyExample"/>
         </classes>
+    </test>
+    <test name="grouping test">
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <include name="regression"/>
+<!--                <exclude name="regression"/>-->
+            </run>
+        </groups>
+        <classes>
+            <class name="GroupingTestExample"/>
+        </classes>
+
     </test>
 </suite>
