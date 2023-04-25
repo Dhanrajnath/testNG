@@ -2,7 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="/home/dhanrp/Desktop/eBay/testNG">
-
-<!--        <classes/>-->
+        <classes>
+            <class name="FirstTestCase"/>
+        </classes>
     </test>
 </suite>
