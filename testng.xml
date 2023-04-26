@@ -38,12 +38,27 @@
             <run>
                 <include name="sanity"/>
                 <include name="regression"/>
-<!--                <exclude name="regression"/>-->
+                <!--                <exclude name="regression"/>-->
             </run>
         </groups>
         <classes>
             <class name="GroupingTestExample"/>
         </classes>
-
+    </test>
+    <test name="parameters test-1">
+        <parameter name="a" value="1"/>
+        <parameter name="b" value="2"/>
+        <parameter name="sum" value="3"/>
+        <classes>
+            <class name="ParameterExample"/>
+        </classes>
+    </test>
+    <test name="parameters test-2">
+        <parameter name="a" value="3"/>
+        <parameter name="b" value="2"/>
+        <parameter name="sum" value="5"/>
+        <classes>
+            <class name="ParameterExample"/>
+        </classes>
     </test>
 </suite>
