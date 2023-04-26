@@ -1,19 +1,13 @@
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class DataProviderExample {
 
-    @Test(dataProvider = "LoginDataProvider")
+    @Test(dataProvider = "LoginDataProvider", dataProviderClass = CustomDataProvider.class)
     public void loginTest(String email, String password) {
         System.out.println("DataProviderExample.loginTest");
         System.out.println("email = " + email + ", password = " + password);
         Assert.assertEquals(email.split("@")[0], password);
     }
 
-    @DataProvider(name = "LoginDataProvider")
-    public Object[][] getData() {
-        Object[][] data = {{"abc@gmail.com", "abc"}, {"xyz@gmail.com", "xyz"}};
-        return data;
-    }
 }
