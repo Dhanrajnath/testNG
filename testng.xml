@@ -61,4 +61,12 @@
             <class name="ParameterExample"/>
         </classes>
     </test>
+    <listeners>
+        <listener class-name="listeners.PostActionsUsingListeners"/>
+    </listeners>
+    <test name="listeners test">
+        <classes>
+            <class name="listeners.ListenerTest"/>
+        </classes>
+    </test>
 </suite>

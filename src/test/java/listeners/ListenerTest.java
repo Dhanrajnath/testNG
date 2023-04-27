@@ -5,7 +5,7 @@ import org.testng.SkipException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(listeners.PostActionsUsingListeners.class)
+//@Listeners(listeners.PostActionsUsingListeners.class)  ---> not needed if we configure using testNG xml file
 public class ListenerTest {
 
     @Test
