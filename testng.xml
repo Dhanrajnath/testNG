@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<!--  parallel methods/ classes/ tests   -->
+<suite name="All Test Suite" parallel="classes" thread-count="9">
     <test verbose="2" preserve-order="true" name="sample tests">
         <classes>
             <class name="FirstTestCase"/>
@@ -67,6 +68,12 @@
     <test name="listeners test">
         <classes>
             <class name="listeners.ListenerTest"/>
+        </classes>
+    </test>
+    <test name="parallel tests">
+        <classes>
+            <class name="parallelTesting.ParallelTest1"/>
+            <class name="parallelTesting.ParallelTest2"/>
         </classes>
     </test>
 </suite>
