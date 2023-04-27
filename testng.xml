@@ -76,4 +76,13 @@
             <class name="parallelTesting.ParallelTest2"/>
         </classes>
     </test>
+    <test name="regex method name match tests">
+        <classes>
+            <class name="RegexTest">
+                <methods>
+                    <include name="test.*"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
