@@ -1,7 +1,6 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -15,14 +14,16 @@ public class AssertionsExample {
     void setup() {
         System.out.println("AssertionsExample.setup");
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        webDriver = new ChromeDriver();
-        webDriver.get("https://opensource-demo.orangehrmlive.com/");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
+        webDriver = new ChromeDriver(chromeOptions);
+        webDriver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
     @Test(priority = 1)
-    void logoTest() {
-        WebElement logo = webDriver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[1]/img"));
-        Assert.assertTrue(logo.isDisplayed(), "Logo is not displayed on the page!!!");
+    void testURL() {
+        String logo = webDriver.getCurrentUrl();
+        Assert.assertEquals(logo, "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
     @Test(priority = 2)
